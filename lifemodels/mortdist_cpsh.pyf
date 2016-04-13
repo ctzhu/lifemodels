@@ -1,0 +1,210 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module mortdist_cpsh ! in 
+    interface  ! in :mortdist_cpsh
+        subroutine gp2_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gp2_cpsh
+        subroutine gp2lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gp2lg_cpsh
+        subroutine gp3_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gp3_cpsh
+        subroutine gp3lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gp3lg_cpsh
+        subroutine gl3_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gl3_cpsh
+        subroutine gl3lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gl3lg_cpsh
+        subroutine gl4_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gl4_cpsh
+        subroutine gl4lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine gl4lg_cpsh
+        subroutine wb2_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine wb2_cpsh
+        subroutine wb2lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine wb2lg_cpsh
+        subroutine wb3_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine wb3_cpsh
+        subroutine wb3lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine wb3lg_cpsh
+        subroutine lg2_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine lg2_cpsh
+        subroutine lg2lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine lg2lg_cpsh
+        subroutine lg3_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine lg3_cpsh
+        subroutine lg3lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine lg3lg_cpsh
+        subroutine llg2_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine llg2_cpsh
+        subroutine llg2lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine llg2lg_cpsh
+        subroutine llg3_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine llg3_cpsh
+        subroutine llg3lg_cpsh(p,x,cdf,pdf,sf,hzd,m,n) ! in :mortdist_cpsh:mortdist_cpsh.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(n),intent(in) :: x
+            double precision dimension(n),intent(out),depend(n) :: cdf
+            double precision dimension(n),intent(out),depend(n) :: pdf
+            double precision dimension(n),intent(out),depend(n) :: sf
+            double precision dimension(n),intent(out),depend(n) :: hzd
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(len(x)>=n),depend(x) :: n=len(x)
+        end subroutine llg3lg_cpsh
+    end interface 
+end python module mortdist_cpsh
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

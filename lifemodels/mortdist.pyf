@@ -1,0 +1,281 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module mortdist ! in 
+    interface  ! in :mortdist
+        subroutine gp3llk(x1,x2,y,a,b,c,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: a
+            double precision :: b
+            double precision :: c
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine gp3llk
+        subroutine gp3llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine gp3llk_lp
+        subroutine gl3llk(sx1,sx2,sy,sa,sb,sd,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: sx1
+            double precision dimension(n),intent(in),depend(n) :: sx2
+            double precision intent(out) :: sy
+            double precision :: sa
+            double precision :: sb
+            double precision :: sd
+            integer, optional,check(len(sx1)>=n),depend(sx1) :: n=len(sx1)
+        end subroutine gl3llk
+        subroutine gl3llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine gl3llk_lp
+        subroutine gl4llk(sx1,sx2,sy,sa,sb,sc,sd,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: sx1
+            double precision dimension(n),intent(in),depend(n) :: sx2
+            double precision intent(out) :: sy
+            double precision :: sa
+            double precision :: sb
+            double precision :: sc
+            double precision :: sd
+            integer, optional,check(len(sx1)>=n),depend(sx1) :: n=len(sx1)
+        end subroutine gl4llk
+        subroutine gl4llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine gl4llk_lp
+        subroutine gp2llk(x1,x2,y,a,b,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: a
+            double precision :: b
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine gp2llk
+        subroutine gp2llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine gp2llk_lp
+        subroutine wb2llk(x1,x2,y,l,k,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: l
+            double precision :: k
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine wb2llk
+        subroutine wb2llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine wb2llk_lp
+        subroutine wb3llk(x1,x2,y,l,k,c,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: l
+            double precision :: k
+            double precision :: c
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine wb3llk
+        subroutine wb3llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine wb3llk_lp
+        subroutine lg2llk(x1,x2,y,u,s,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: u
+            double precision :: s
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine lg2llk
+        subroutine lg2llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine lg2llk_lp
+        subroutine lg3llk(sx1,sx2,sy,su,ss,sc,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: sx1
+            double precision dimension(n),intent(in),depend(n) :: sx2
+            double precision intent(out) :: sy
+            double precision :: su
+            double precision :: ss
+            double precision :: sc
+            integer, optional,check(len(sx1)>=n),depend(sx1) :: n=len(sx1)
+        end subroutine lg3llk
+        subroutine lg3llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine lg3llk_lp
+        subroutine llg2llk(x1,x2,y,a,b,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: a
+            double precision :: b
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine llg2llk
+        subroutine llg2llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine llg2llk_lp
+        subroutine llg3llk(x1,x2,y,a,b,c,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n),intent(in) :: x1
+            double precision dimension(n),intent(in),depend(n) :: x2
+            double precision intent(out) :: y
+            double precision :: a
+            double precision :: b
+            double precision :: c
+            integer, optional,check(len(x1)>=n),depend(x1) :: n=len(x1)
+        end subroutine llg3llk
+        subroutine llg3llk_lp(p,x,y,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision intent(out) :: y
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine llg3llk_lp
+        subroutine scan_m(x,ly,lp,func,k,n,m) ! in :mortdist:mortdist.f90
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(k),intent(out),depend(k) :: ly
+            double precision dimension(k,m),intent(in) :: lp
+            external func
+            integer, optional,check(shape(lp,0)==k),depend(lp) :: k=shape(lp,0)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            integer, optional,check(shape(lp,1)==m),depend(lp) :: m=shape(lp,1)
+            interface afunc ! in :mortdist:mortdist.f90:scan_m
+                subroutine func(p,x,y,m,n) ! in :mortdist:mortdist.f90:scan_m:afunc
+                    double precision dimension(m) :: p
+                    double precision dimension(2,n) :: x
+                    double precision intent(out) :: y
+                    integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+                    integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+                end subroutine func
+            end interface afunc
+        end subroutine scan_m
+        subroutine scan_2(x,yl,al,bl,n,m) ! in :mortdist:mortdist.f90
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(m),intent(out),depend(m) :: yl
+            double precision dimension(m),intent(in) :: al
+            double precision dimension(m),intent(in),depend(m) :: bl
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            integer, optional,check(len(al)>=m),depend(al) :: m=len(al)
+        end subroutine scan_2
+        subroutine scan_range_2(x,ar,br,m,yl,al,bl,n) ! in :mortdist:mortdist.f90
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(2),intent(in) :: ar
+            double precision dimension(2),intent(in) :: br
+            integer :: m
+            double precision dimension(m*m),intent(out),depend(m) :: yl
+            double precision dimension(m*m),intent(out),depend(m) :: al
+            double precision dimension(m*m),intent(out),depend(m) :: bl
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+        end subroutine scan_range_2
+        subroutine derivative(p,x,r,func,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(m),intent(out),depend(m) :: r
+            external func
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            interface afunc ! in :mortdist:mortdist.f90:derivative
+                subroutine func(p,x,y,m,n) ! in :mortdist:mortdist.f90:derivative:afunc
+                    double precision dimension(m) :: p
+                    double precision dimension(2,n) :: x
+                    double precision intent(out) :: y
+                    integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+                    integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+                end subroutine func
+            end interface afunc
+        end subroutine derivative
+        subroutine derivative2(p,x,r,func,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(m,m),intent(out),depend(m,m) :: r
+            external func
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            interface afunc ! in :mortdist:mortdist.f90:derivative2
+                subroutine func(p,x,y,m,n) ! in :mortdist:mortdist.f90:derivative2:afunc
+                    double precision dimension(m) :: p
+                    double precision dimension(2,n) :: x
+                    double precision intent(out) :: y
+                    integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+                    integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+                end subroutine func
+            end interface afunc
+        end subroutine derivative2
+        subroutine ederivative(p,x,r,func,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(m),intent(out),depend(m) :: r
+            external func
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            interface afunc ! in :mortdist:mortdist.f90:ederivative
+                subroutine func(p,x,y,m,n) ! in :mortdist:mortdist.f90:ederivative:afunc
+                    double precision dimension(m) :: p
+                    double precision dimension(2,n) :: x
+                    double precision intent(out) :: y
+                    integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+                    integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+                end subroutine func
+            end interface afunc
+        end subroutine ederivative
+        subroutine ederivative2(p,x,r,func,m,n) ! in :mortdist:mortdist.f90
+            double precision dimension(m),intent(in) :: p
+            double precision dimension(2,n),intent(in) :: x
+            double precision dimension(m,m),intent(out),depend(m,m) :: r
+            external func
+            integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+            integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+            interface afunc ! in :mortdist:mortdist.f90:ederivative2
+                subroutine func(p,x,y,m,n) ! in :mortdist:mortdist.f90:ederivative2:afunc
+                    double precision dimension(m) :: p
+                    double precision dimension(2,n) :: x
+                    double precision intent(out) :: y
+                    integer, optional,check(len(p)>=m),depend(p) :: m=len(p)
+                    integer, optional,check(shape(x,1)==n),depend(x) :: n=shape(x,1)
+                end subroutine func
+            end interface afunc
+        end subroutine ederivative2
+        subroutine inverse(m,c,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n,n),intent(in) :: m
+            double precision dimension(n,n),intent(out),depend(n,n) :: c
+            integer, optional,check(shape(m,0)==n),depend(m) :: n=shape(m,0)
+        end subroutine inverse
+        subroutine einverse(m,r,n) ! in :mortdist:mortdist.f90
+            double precision dimension(n,n),intent(in) :: m
+            double precision dimension(n,n),intent(out),depend(n,n) :: r
+            integer, optional,check(shape(m,0)==n),depend(m) :: n=shape(m,0)
+        end subroutine einverse
+    end interface 
+end python module mortdist
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
